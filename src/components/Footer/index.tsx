@@ -1,3 +1,7 @@
 export function Footer() {
-  return <footer>Feito por Gabriel Lopes</footer>;
+  return (
+    <footer style={{ position: "absolute", bottom: "12px" }}>
+      Feito por Gabriel Lopes
+    </footer>
+  );
 }
