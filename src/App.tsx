@@ -1,9 +1,10 @@
-import { Header, Footer } from "./components";
+import { Form, Header, Footer } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Form />
       <Footer />
     </div>
   );
