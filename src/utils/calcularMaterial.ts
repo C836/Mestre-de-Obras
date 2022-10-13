@@ -9,11 +9,11 @@ export function calcularMaterial(
   area_piso: number,
   preco_piso: number
 ) {
-  const quant_blocos = calcularQuantBlocos(area_bloco, metragem_comodo);
-  const quant_pisos = calcularQuantPisos(area_piso, metragem_comodo);
+  const quant_blocos = Math.ceil(calcularQuantBlocos(area_bloco, metragem_comodo));
+  const quant_pisos = Math.ceil(calcularQuantPisos(area_piso, metragem_comodo));
 
-  const preco_blocos = Math.ceil(quant_blocos * preco_bloco);
-  const preco_pisos = Math.ceil(quant_pisos * preco_piso);
+  const preco_blocos = quant_blocos * preco_bloco;
+  const preco_pisos = quant_pisos * preco_piso;
 
   const soma = preco_blocos + preco_pisos;
   const taxa = (TAXA_DESPERDICIO / 100) * soma;
