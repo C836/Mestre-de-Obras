@@ -15,9 +15,10 @@ export function calcularMaterial(
   const preco_blocos = Math.ceil(quant_blocos * preco_bloco);
   const preco_pisos = Math.ceil(quant_pisos * preco_piso);
 
-  const total = preco_blocos + preco_pisos;
+  const soma = preco_blocos + preco_pisos;
+  const taxa = (TAXA_DESPERDICIO / 100) * soma;
 
-  const taxa = (TAXA_DESPERDICIO / 100) * total;
+  const total = soma + taxa;
 
-  return { quant_blocos, quant_pisos, preco_bloco, preco_piso, total, taxa };
+  return { quant_blocos, quant_pisos, preco_bloco, preco_piso, total };
 }
