@@ -1,5 +1,10 @@
 import { Container } from "./style";
 
-export function Button() {
-  return <Container>Calcular</Container>;
+type Props = {
+  children: string;
+  onClick?: () => any;
+};
+
+export function Button({ children, onClick }: Props) {
+  return <Container onClick={onClick}>{children}</Container>;
 }
