@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form, Header, Footer } from "./components";
+import { Info } from "./components/Info";
 import { Results } from "./components/Results";
 import { ResultState } from "./types";
 
@@ -25,6 +26,7 @@ function App() {
           total={results.total}
         />
       )}
+      <Info />
       <Footer />
     </div>
   );
