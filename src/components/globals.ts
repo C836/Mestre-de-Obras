@@ -33,3 +33,22 @@ export const Background = styled.img`
   left: 0; 
   filter: brightness(0.5);
 `;
+
+export const Container = styled.div`
+  width: 400px;
+  max-width: 100vw;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-bottom: 60px;
+`;
+
+export const Border = styled.div`
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ffffff60;
+  border-radius: 10px;
+  width: 100%;
+  padding: 12px;
+`;
