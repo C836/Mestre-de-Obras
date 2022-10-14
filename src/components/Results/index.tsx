@@ -7,8 +7,8 @@ type Props = {
   reset: () => void;
   quant_blocos: number;
   quant_pisos: number;
-  preco_bloco: number;
-  preco_piso: number;
+  unidade_bloco: number;
+  unidade_piso: number;
   total: number;
 };
 
@@ -16,8 +16,8 @@ export function Results({
   reset,
   quant_blocos,
   quant_pisos,
-  preco_bloco,
-  preco_piso,
+  unidade_bloco,
+  unidade_piso,
   total,
 }: Props) {
   return (
@@ -26,13 +26,13 @@ export function Results({
         <Value>
           Blocos necessários
           <h2>
-            {quant_blocos} unidades ({formatarValor(preco_bloco)})
+            {quant_blocos} unidades ({formatarValor(unidade_bloco)})
           </h2>
         </Value>
         <Value>
           Pisos necessários
           <h2>
-            {quant_pisos} unidades ({formatarValor(preco_piso)})
+            {quant_pisos} unidades ({formatarValor(unidade_piso)})
           </h2>
         </Value>
         <Value>
