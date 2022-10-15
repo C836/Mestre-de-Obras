@@ -29,15 +29,7 @@ export function Form({ setResults }: Props) {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const result = calcularMaterial(
-      formData.metragem_comodo,
-      formData.bloco_largura * formData.bloco_altura,
-      formData.preco_bloco,
-      formData.piso_largura * formData.piso_altura,
-      formData.preco_piso
-    );
-
-    console.log(result);
+    const result = calcularMaterial(formData);
 
     setResults(result);
   };
@@ -57,7 +49,7 @@ export function Form({ setResults }: Props) {
           <input
             required
             type="number"
-            min={5}
+            min={0.1}
             step=".1"
             name="metragem_comodo"
             value={formData.metragem_comodo}
@@ -116,7 +108,7 @@ export function Form({ setResults }: Props) {
 
       <Border>
         <Label>
-          Preço por caixa de piso*
+          Preço por caixa de piso (10 unidades)*
           <input
             required
             type="number"

@@ -21,8 +21,8 @@ function App() {
           reset={reset}
           quant_blocos={results.quant_blocos}
           quant_pisos={results.quant_pisos}
-          preco_bloco={results.preco_bloco}
-          preco_piso={results.preco_piso}
+          unidade_bloco={results.unidade_bloco}
+          unidade_piso={results.unidade_piso}
           total={results.total}
         />
       )}

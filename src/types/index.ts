@@ -1,8 +1,8 @@
 export type ResultState = {
   quant_blocos: number;
   quant_pisos: number;
-  preco_bloco: number;
-  preco_piso: number;
+  unidade_bloco: number;
+  unidade_piso: number;
   total: number;
 };
 
