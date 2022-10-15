@@ -31,8 +31,6 @@ export function Form({ setResults }: Props) {
 
     const result = calcularMaterial(formData);
 
-    console.log(result);
-
     setResults(result);
   };
 

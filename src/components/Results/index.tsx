@@ -1,16 +1,12 @@
+import { ResultState } from "../../types";
 import { formatarValor } from "../../utils/formatarValor";
 import { Button } from "../Button";
 import { Container, Border } from "../globals";
 import { Value } from "./style";
 
-type Props = {
+interface Props extends ResultState {
   reset: () => void;
-  quant_blocos: number;
-  quant_pisos: number;
-  unidade_bloco: number;
-  unidade_piso: number;
-  total: number;
-};
+}
 
 export function Results({
   reset,
